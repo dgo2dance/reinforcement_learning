@@ -42,3 +42,21 @@ print(rand_l)
 
 for i in range(2):
     print (i)
+
+
+"""
+数组拼接方法一
+
+思路：首先将数组转成列表，然后利用列表的拼接函数append()、extend()等进行拼接处理，最后将列表转成数组。
+
+示例1：
+"""
+import numpy as np
+a=np.array([1,2,5])
+b=np.array([10,12,15])
+a_list=list(a)
+b_list=list(b)
+a_list.extend(b_list)
+a_list+=b_list
+a=np.array(a_list)
+
