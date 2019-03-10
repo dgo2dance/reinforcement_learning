@@ -64,9 +64,13 @@ class GeneticAlgorithm:
 
         #路线数组
         lines = [[0 for i in range(self.mans)] for i in range(self.rows)]
+        print('\r\nlines:\n')
+        print(lines)
 
         #适应度
         fit = [0 for i in range(self.rows)]
+        print('\r\nfit:\n')
+        print(fit)
 
         # print "初始输入获取rows个随机排列，并且计算适应度"
         #初始输入获取rows个随机排列，并且计算适应度
@@ -81,7 +85,11 @@ class GeneticAlgorithm:
 
             #计算每个线路的适应度
             # print "计算每个线路的适应度 i = %d" % (i)
+            print('\r\n lines:\n')
+            print(lines[i])
             fit[i] = self.calFitness(lines[i], False)
+            print('\r\n fit:')
+            print(fit[i])
 
         #迭代次数
         t = 0
@@ -241,8 +249,8 @@ class GeneticAlgorithm:
         #输出结果:
         self.calFitness(lines[ml], True)
 
-        #print "最优权值为: %f" %(m)
-        #print "最优结果为:"
+        print ("最优权值为: %f" %(m))
+        print ("最优结果为:")
 
         for i in range(self.mans):
             print ("%d," %(lines[ml][i])),
@@ -380,7 +388,7 @@ class GeneticAlgorithm:
         self.PW = PW                                #当生成一个不可行路线时的惩罚因子
 
 """
-ga = GeneticAlgorithm(rows=20, times=25, mans=8, cars=2, tons=8, distance=50, PW=100)
+ga = GeneticAlgorithm(rows=20, times=20, mans=8, cars=2, tons=8, distance=50, PW=100)
 
 for i in range(20):
     print ("第 %d 次：" %(i + 1))
