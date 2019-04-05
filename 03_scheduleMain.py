@@ -11,7 +11,7 @@ if __name__ == "__main__":
     populationsize =150  # 种群大小，含有多少个个体
     chromosomesize = 30  #染色体中 基因个数， 一个染色体含有多少基因
     genesize = 7 #基因大小，一个基因中含有多少数据位
-    tournamentsize =20
+    tournamentsize =20 #锦标赛策略选择个数
     mutation_rate =0.07
     require_a=[9,8,9,8,9,10,10]
     require_p=[6,5,6,5,7,7,7]
